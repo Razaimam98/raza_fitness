@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>Welcome to Raza Fitness</h1>
+    <p>Your ultimate guide to Fitness, Nutrition, and Workouts.</p>
+</section>
+
+<section class="blogs">
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='images/nutrition.jpg') }}" alt="Nutrition">
+        <h3>Nutrition Tips</h3>
+        <p>Learn how to eat right for your fitness goals...</p>
+        <a href="{{ url_for('nutrition') }}">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='images/supplements.jpg') }}" alt="Supplements">
+        <h3>Supplements Guide</h3>
+        <p>Best supplements for muscle growth and recovery...</p>
+        <a href="{{ url_for('supplements') }}">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='images/workouts.jpg') }}" alt="Workouts">
+        <h3>Workout Plans</h3>
+        <p>Effective workouts for strength and stamina...</p>
+        <a href="{{ url_for('workouts') }}">Read More</a>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='images/motivation.jpg') }}" alt="Motivation">
+        <h3>Motivation</h3>
+        <p>Stay inspired and consistent with your fitness journey...</p>
+        <a href="{{ url_for('motivation') }}">Read More</a>
+    </div>
+</section>
+{% endblock %}
